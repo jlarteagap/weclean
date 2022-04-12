@@ -19,7 +19,7 @@ const Header = () => {
         <div className="container is-widescreen">
           <div className="header__brand navbar-brand">
             <a className="navbar-item" href={empresa.url}>
-              <img src={empresa.logo} className="header__logo" />
+              <img loading="lazy" src={empresa.logo} className="header__logo" />
             </a>
             <BurgerMenu
               isActive={isActive}

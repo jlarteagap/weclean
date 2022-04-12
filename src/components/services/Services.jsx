@@ -35,7 +35,7 @@ const Services = () => {
             {CATEGORIA === 'GENERAL' && (
               <>
                 <div className="column p-0">
-                  <img src={IMAGENES[0].URL} />
+                  <img loading="lazy" src={IMAGENES[0].URL} />
                 </div>
                 <div className="column p-0">
                   <div className="services__content">

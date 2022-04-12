@@ -25,7 +25,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="%PUBLIC_URL%/privacy_policies.html"
+                  href="/privacy_policies.html"
                   target="_blank"
                   rel="noreferrer"
                 >
