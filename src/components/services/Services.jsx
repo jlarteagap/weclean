@@ -17,7 +17,7 @@ const Services = () => {
   }, [])
 
   return (
-    <div className="services" id="servicios">
+    <div className={`services ${services ? '' : 'is-hidden'}`} id="servicios">
       <h3 className="services__top-title title is-2 has-text-centered py-5">
         Consulta algunos de nuestros servicios
       </h3>

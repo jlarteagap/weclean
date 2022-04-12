@@ -33,6 +33,9 @@ const Header = () => {
               <a className="header__item navbar-item" href="#">
                 Inicio
               </a>
+              <a className="header__item navbar-item" href="#nosotros">
+                Nosotros
+              </a>
               <a className="header__item navbar-item" href="#como-funciona">
                 Como funciona
               </a>

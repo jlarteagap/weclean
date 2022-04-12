@@ -24,7 +24,13 @@ const Footer = () => {
                 <a href="">Cookies</a>
               </li>
               <li>
-                <a href="">Politicas de privacidad</a>
+                <a
+                  href="%PUBLIC_URL%/privacy_policies.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Politicas de privacidad
+                </a>
               </li>
               <li>
                 <a href="">Politicas de seguridad</a>

@@ -1,4 +1,6 @@
-.services {}
+.services {
+
+}
 .services__top-title{
     background-color: var(--secondary);
     color: white;

@@ -39,7 +39,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="testimonial" id='testimonios'>
+    <div className={`testimonial ${testimonials ? '' : 'is-hidden'}`} id='testimonios'>
       <div className='container is-widescreen'>
         <h3 className="testimonial__top-title title is-1 has-text-centered">
           No tomes nuestra <span className='title__colored'> palabra</span>

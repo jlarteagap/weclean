@@ -16,7 +16,7 @@ const About = () => {
   }, [])
 
   return (
-    <div className="about">
+    <div className={`about ${about ? '' : 'hidden'}`} id="nosotros">
       <div className="container is-widescreen">
         {about.map(data => {
           return (

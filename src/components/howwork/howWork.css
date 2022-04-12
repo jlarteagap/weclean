@@ -1,6 +1,9 @@
 .how__work{
-    margin-top: 5rem;
+    margin-top: 2.5rem;
     margin-bottom: 5rem;
+}
+.how__work-header{
+    padding-top: 5rem ;
 }
 .how__content > div > p{
     text-align: center;

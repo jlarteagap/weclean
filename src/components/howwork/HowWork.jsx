@@ -18,7 +18,7 @@ const HowWork = () => {
 
   return (
     <div className="how__work container is-widescreen" id="como-funciona">
-      <div className="how__work-header my-5">
+      <div className="how__work-header">
         <h3 className="how__work-title title is-1 has-text-centered">
           Cómo <span className="title__colored">funciona</span>
         </h3>
