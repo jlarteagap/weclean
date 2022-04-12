@@ -4,9 +4,12 @@ import { FaQuoteLeft } from 'react-icons/fa'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import { getData } from '../../api/Api'
+import useData from '../../hooks/useData'
+
 import './testimonial.css'
 
 const Testimonial = () => {
+  const { updateTestimonial } = useData()
   const [testimonials, setTestimonials] = useState([])
 
   useEffect(() => {
@@ -14,6 +17,7 @@ const Testimonial = () => {
       try {
         const res = await getData('testimonios')
         setTestimonials(res)
+        updateTestimonial()
       } catch (error) {
         console.log(error)
       }
@@ -72,8 +76,6 @@ const Testimonial = () => {
 
                 </div></SplideSlide>)
               })}
-             
-          
         </Splide>
       </div>
     </div>

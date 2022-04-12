@@ -6,7 +6,13 @@ import { BurgerMenu } from './BurgerMenu'
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
-  const { empresa } = useData()
+  const {
+    empresa,
+    aboutContext,
+    howContext,
+    serviceContext,
+    testimonialContext
+  } = useData()
   return (
     <header className="header">
       <nav className="navbar is-fixed-top" role="navigation">
@@ -33,18 +39,26 @@ const Header = () => {
               <a className="header__item navbar-item" href="#">
                 Inicio
               </a>
-              <a className="header__item navbar-item" href="#nosotros">
-                Nosotros
-              </a>
-              <a className="header__item navbar-item" href="#como-funciona">
-                Como funciona
-              </a>
-              <a className="header__item navbar-item" href="#testimonios">
-                Testimonios
-              </a>
-              <a className="header__item navbar-item" href="#servicios">
-                Servicios
-              </a>
+              {aboutContext && (
+                <a className="header__item navbar-item" href="#nosotros">
+                  Nosotros
+                </a>
+              )}
+              {howContext && (
+                <a className="header__item navbar-item" href="#como-funciona">
+                  Como funciona
+                </a>
+              )}
+              {testimonialContext && (
+                <a className="header__item navbar-item" href="#testimonios">
+                  Testimonios
+                </a>
+              )}
+              {serviceContext && (
+                <a className="header__item navbar-item" href="#servicios">
+                  Servicios
+                </a>
+              )}
             </div>
 
             <div className="header__social navbar-end is-flex is-align-items-center">

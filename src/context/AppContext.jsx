@@ -1,14 +1,18 @@
 import React, { createContext, useState, useEffect } from 'react'
 
 export const AppContext = createContext({
-  empresa: undefined
+  empresa: undefined,
+  aboutContext: false
 })
 
 const { API_HOST, A, E, UB } = window.CONFIG
 
 export function AppProvider({ children }) {
   const [empresa, setEmpresa] = useState([])
-
+  const [aboutContext, setAboutContext] = useState(false)
+  const [serviceContext, setServiceContext] = useState(false)
+  const [testimonialContext, setTestimonialContext] = useState(false)
+  const [howContext, setHowContext] = useState(false)
   useEffect(() => {
     const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub=${UB}`
     fetch(url)
@@ -17,8 +21,29 @@ export function AppProvider({ children }) {
         setEmpresa(data.records)
       })
   }, [])
+
+  const updateAbout = () => {
+    setAboutContext(true)
+  }
+  const updateService = () => {
+    setServiceContext(true)
+  }
+  const updateTestimonial = () => {
+    setTestimonialContext(true)
+  }
+  const updateHow = () => {
+    setHowContext(true)
+  }
   const value = {
-    empresa
+    empresa,
+    aboutContext,
+    serviceContext,
+    testimonialContext,
+    howContext,
+    updateAbout,
+    updateService,
+    updateTestimonial,
+    updateHow
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

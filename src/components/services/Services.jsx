@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import './services.css'
 import { getData } from '../../api/Api'
+import useData from '../../hooks/useData'
 
 const Services = () => {
+  const { updateService } = useData()
   const [services, setServices] = useState([])
-
   useEffect(() => {
     ;(async () => {
       try {
         const res = await getData('servicios')
         setServices(res.records.reverse())
+        updateService()
       } catch (error) {
         console.log(error)
       }

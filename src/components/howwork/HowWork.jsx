@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './howWork.css'
 import { getData } from '../../api/Api'
+import useData from '../../hooks/useData'
 
 const HowWork = () => {
+  const { updateHow } = useData()
   const [work, setWork] = useState([])
 
   useEffect(() => {
@@ -10,6 +12,7 @@ const HowWork = () => {
       try {
         const res = await getData('servicios')
         setWork(res.records)
+        updateHow()
       } catch (error) {
         console.log(error)
       }
