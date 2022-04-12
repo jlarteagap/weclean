@@ -36,11 +36,23 @@ const Header = () => {
             }`}
           >
             <div className="navbar-start">
-              <a className="header__item navbar-item" href="#">
+              <a
+                className="header__item navbar-item"
+                href="#"
+                onClick={() => {
+                  setIsActive(!isActive)
+                }}
+              >
                 Inicio
               </a>
               {aboutContext && (
-                <a className="header__item navbar-item" href="#nosotros">
+                <a
+                  className="header__item navbar-item"
+                  href="#nosotros"
+                  onClick={() => {
+                    setIsActive(!isActive)
+                  }}
+                >
                   Nosotros
                 </a>
               )}
@@ -55,7 +67,13 @@ const Header = () => {
                 </a>
               )}
               {serviceContext && (
-                <a className="header__item navbar-item" href="#servicios">
+                <a
+                  className="header__item navbar-item"
+                  href="#servicios"
+                  onClick={() => {
+                    setIsActive(!isActive)
+                  }}
+                >
                   Servicios
                 </a>
               )}

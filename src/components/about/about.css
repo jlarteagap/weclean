@@ -33,7 +33,7 @@
     }
     .about__content > div > p{
         font-size: 1.25rem;
-        padding: 0;
+        padding: 5rem 0 0 0;
     }
 
     .about__card h4{
@@ -41,5 +41,6 @@
     }
     .about__cards{
         flex-direction: column;
+        align-items: center;
     }
 }
