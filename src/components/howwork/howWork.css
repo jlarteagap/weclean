@@ -1,0 +1,34 @@
+.how__work{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.how__content > div > p{
+    text-align: center;
+    font-size: 1.75rem;
+}
+.how__cards{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.how__card{
+    max-width: 350px;
+    text-align: center;
+}
+.how__card h4{
+    color: var(--secondary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.how__card p{
+    margin-top: 1rem;
+}
+@media only screen and (max-width: 600px){
+    .how__work{
+        padding: 0 1rem;
+    }
+    .how__cards{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,16 @@
+.footer{
+    color: white;
+    background: var(--secondary);
+}
+.footer a, .footer__title {
+    color: white;
+    transition: all .4s;
+}
+.footer a:hover{
+    color: var(--primary)
+}
+
+.address__icon{
+    color: var(--primary);
+    width: 16px !important;
+}

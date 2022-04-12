@@ -1,0 +1,47 @@
+.services {}
+.services__top-title{
+    background-color: var(--secondary);
+    color: white;
+}
+
+.service__ul li{
+    font-weight: 600;
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+    padding-left: 32px;
+    position: relative;
+}
+.service__ul li::before{
+    background: url('../../assets/check.svg') no-repeat;
+    content: '';
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+}
+
+.services__content{
+    padding: 5rem;
+}
+.service__ul svg{
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 600px){
+    .services__title{
+        font-size: 1.25rem !important;
+    }
+    .services__top-title{
+        padding: 0 1rem;
+        font-size: 1.35rem !important;
+    }
+    .services__content{
+        padding: 2rem;
+    }
+    .service__ul li{
+        font-size: 1rem;
+    }
+    .service__columns{
+        margin: 0;
+    }
+}

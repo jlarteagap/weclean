@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('./assets/fonts/Gotham-Medium.woff') format('woff2'),
+        url('./assets/fonts/Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root{
+    --primary: #94e4ce;
+    --secondary: #34597e;
+    --bgcolor: #fafafa;
+    --fontColor: #b4b4b4;
+}
+
+body{
+    font-family: 'Gotham', sans-serif !important;
+    font-weight: 600 !important;
+    color: var(--fontColor);
+}
+.social{
+    gap: 1rem;
+}
+.social__icons {
+    border-radius: 5px;
+    background: white;
+    width: 2rem;
+    height: 2rem;
+}
+.social__icon{
+    color: var(--secondary);
+}
+.colored{
+    background-color: var(--primary);
+    color: white;
+    transition: all .4s;
+}
+.colored:hover{
+    background-color: var(--secondary);
+}
+.colored > .social__icon{
+    color: white;
+}
+
+.subscribe__input, .subscribe__button{
+    border-radius: 0;
+}
+.subscribe__button{
+    background-color: var(--primary) !important;
+    transition: all .4s;
+}
+.subscribe__button:hover{
+    background-color: var(--secondary) !important;
+}
+.modal__head{
+    background-color: var(--primary) !important;
+    border: none !important;
+}
+.modal__title{
+    color: white !important;
+}
+
+.title__colored{
+    color: var(--primary);
+    text-decoration: underline;
+}

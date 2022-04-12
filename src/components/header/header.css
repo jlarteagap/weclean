@@ -1,0 +1,21 @@
+.header__logo{
+    width: 120px;
+    max-height: inherit !important;
+}
+.header__item{
+    color: var(--secondary);
+    transition: all .4s;
+}
+.header__item:hover{
+    background-color: transparent !important;
+    color: var(--primary) !important;
+}
+@media only screen and (max-width: 600px){
+    .header__brand{
+        display: flex;
+        align-items: center;
+    }
+    .header__social{
+        justify-content: center;
+    }
+}

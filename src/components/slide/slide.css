@@ -1,0 +1,28 @@
+.slide{
+    background-image: url('../../assets/clean.jpg');
+    background-color: rgba(90, 90, 90, 0.6);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: 7rem 0 5rem 0;
+}
+
+.slide__header{
+    max-width: 900px;
+}
+.slide__title{
+    color: white;
+}
+
+@media only screen and (max-width: 600px){
+    .slide{
+        padding: 8rem 1rem 5rem;
+    }
+    .slide__title{
+        font-size: 1.5rem !important;
+    }
+    .subscribe__button-title{
+        display: none;
+    }
+}

@@ -1,0 +1,8 @@
+export { default as Header } from './header/Header'
+export { default as HowWork } from './howwork/HowWork'
+export { default as Services } from './services/Services'
+export { default as Slide } from './slide/Slide'
+export { default as Testimonial } from './testimonial/Testimonial'
+export { default as Banner } from './banner/Banner'
+export { default as Footer } from './footer/Footer'
+export { default as About } from './about/About'
