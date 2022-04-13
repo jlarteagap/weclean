@@ -12,15 +12,21 @@ const HowWork = () => {
       try {
         const res = await getData('servicios')
         setWork(res.records)
-        updateHow()
       } catch (error) {
         console.log(error)
       }
     })()
   }, [])
-
+  if (work.length > 0) {
+    updateHow()
+  }
   return (
-    <div className="how__work container is-widescreen" id="como-funciona">
+    <div
+      className={`how__work container is-widescreen ${
+        work.length > 0 ? '' : 'is-hidden'
+      }`}
+      id="como-funciona"
+    >
       <div className="how__work-header">
         <h3 className="how__work-title title is-1 has-text-centered">
           Cómo <span className="title__colored">funciona</span>

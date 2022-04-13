@@ -17,7 +17,7 @@ const Testimonial = () => {
       try {
         const res = await getData('testimonios')
         setTestimonials(res)
-        updateTestimonial()
+       
       } catch (error) {
         console.log(error)
       }
@@ -42,8 +42,10 @@ const Testimonial = () => {
     }
   };
 
+  if(testimonials.length > 0){updateTestimonial()}
+  
   return (
-    <div className={`testimonial ${testimonials ? '' : 'is-hidden'}`} id='testimonios'>
+    <div className={`testimonial ${testimonials.length > 0 ? '' : 'is-hidden'}`} id='testimonios'>
       <div className='container is-widescreen'>
         <h3 className="testimonial__top-title title is-1 has-text-centered">
           No tomes nuestra <span className='title__colored'> palabra</span>

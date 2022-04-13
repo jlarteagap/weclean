@@ -57,12 +57,24 @@ const Header = () => {
                 </a>
               )}
               {howContext && (
-                <a className="header__item navbar-item" href="#como-funciona">
+                <a
+                  className="header__item navbar-item"
+                  href="#como-funciona"
+                  onClick={() => {
+                    setIsActive(!isActive)
+                  }}
+                >
                   Como funciona
                 </a>
               )}
               {testimonialContext && (
-                <a className="header__item navbar-item" href="#testimonios">
+                <a
+                  className="header__item navbar-item"
+                  href="#testimonios"
+                  onClick={() => {
+                    setIsActive(!isActive)
+                  }}
+                >
                   Testimonios
                 </a>
               )}

@@ -11,15 +11,20 @@ const Services = () => {
       try {
         const res = await getData('servicios')
         setServices(res.records.reverse())
-        updateService()
       } catch (error) {
         console.log(error)
       }
     })()
   }, [])
 
+  if (services.length > 0) {
+    updateService()
+  }
   return (
-    <div className={`services ${services ? '' : 'is-hidden'}`} id="servicios">
+    <div
+      className={`services ${services.length > 0 ? '' : 'is-hidden'}`}
+      id="servicios"
+    >
       <h3 className="services__top-title title is-2 has-text-centered py-5">
         Consulta algunos de nuestros servicios
       </h3>

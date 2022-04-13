@@ -11,15 +11,19 @@ const About = () => {
       try {
         const res = await getData('acercade')
         setAbout(res.records)
-        updateAbout()
       } catch (error) {
         console.log(error)
       }
     })()
   }, [])
-
+  if (about.length > 0) {
+    updateAbout()
+  }
   return (
-    <div className={`about ${about ? '' : 'hidden'}`} id="nosotros">
+    <div
+      className={`about ${about.length > 0 ? '' : 'is-hidden'}`}
+      id="nosotros"
+    >
       <div className="container is-widescreen">
         {about.map(data => {
           return (
