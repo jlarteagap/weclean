@@ -16,9 +16,11 @@ const About = () => {
       }
     })()
   }, [])
-  if (about.length > 0) {
-    updateAbout()
-  }
+  useEffect(() => {
+    if (about.length > 0) {
+      updateAbout()
+    }
+  }, [about])
   return (
     <div
       className={`about ${about.length > 0 ? '' : 'is-hidden'}`}

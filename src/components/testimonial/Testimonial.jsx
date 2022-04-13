@@ -42,7 +42,9 @@ const Testimonial = () => {
     }
   };
 
-  if(testimonials.length > 0){updateTestimonial()}
+  useEffect(() => {
+    if(testimonials.length >0) {updateTestimonial()}
+  }, [testimonials])
   
   return (
     <div className={`testimonial ${testimonials.length > 0 ? '' : 'is-hidden'}`} id='testimonios'>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './services.css'
-import { getData } from '../../api/Api'
+import { getServices } from '../../api/Api'
 import useData from '../../hooks/useData'
 
 const Services = () => {
@@ -9,7 +9,7 @@ const Services = () => {
   useEffect(() => {
     ;(async () => {
       try {
-        const res = await getData('servicios')
+        const res = await getServices('general')
         setServices(res.records.reverse())
       } catch (error) {
         console.log(error)
@@ -17,9 +17,12 @@ const Services = () => {
     })()
   }, [])
 
-  if (services.length > 0) {
-    updateService()
-  }
+  useEffect(() => {
+    if (services.length > 0) {
+      updateService()
+    }
+  }, [services])
+
   return (
     <div
       className={`services ${services.length > 0 ? '' : 'is-hidden'}`}
@@ -29,7 +32,8 @@ const Services = () => {
         Consulta algunos de nuestros servicios
       </h3>
       {services.map((service, index) => {
-        const { TITULO, CONTENIDO, CATEGORIA, IMAGENES } = service
+        const { TITULO, CONTENIDO, IMAGENES } = service
+
         return (
           <div
             className={`service__columns columns ${
@@ -37,21 +41,17 @@ const Services = () => {
             }`}
             key={index}
           >
-            {CATEGORIA === 'GENERAL' && (
-              <>
-                <div className="column p-0">
-                  <img loading="lazy" src={IMAGENES[0].URL} />
-                </div>
-                <div className="column p-0">
-                  <div className="services__content">
-                    <h2 className="services__title title">{TITULO}</h2>
-                    <ul className="service__ul">
-                      <div dangerouslySetInnerHTML={{ __html: CONTENIDO }} />
-                    </ul>
-                  </div>
-                </div>
-              </>
-            )}
+            <div className="column p-0">
+              <img loading="lazy" src={IMAGENES[0].URL} />
+            </div>
+            <div className="column p-0">
+              <div className="services__content">
+                <h2 className="services__title title">{TITULO}</h2>
+                <ul className="service__ul">
+                  <div dangerouslySetInnerHTML={{ __html: CONTENIDO }} />
+                </ul>
+              </div>
+            </div>
           </div>
         )
       })}

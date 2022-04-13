@@ -11,3 +11,16 @@ export async function getData(section) {
     console.log(e)
   }
 }
+
+export async function getServices(category) {
+  try {
+    const url = `${API_HOST}/servicios/?a=${A}&e=${E}&ub=${UB}&c=${category}`
+
+    const res = await fetch(url)
+    const result = await res.json()
+
+    return result
+  } catch (e) {
+    console.log(e)
+  }
+}
