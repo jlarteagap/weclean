@@ -11,6 +11,9 @@
 .testimonial__carrousel{
     margin-bottom: 4rem;
 }
+.testimonial__content-quote{
+    max-width: 350px;
+}
 .testimonial__quote{
     border: solid 4px var(--primary);
     border-radius: 1rem;

@@ -24,12 +24,19 @@ const Testimonial = () => {
     })()
   }, [])
 
+  let counter
+  if(testimonials.length >= 3) {
+    counter = 3
+  } else {
+    counter = testimonials.length
+  }
+
   const mainOptions = {
     arrows: false,
     rewind: true,
     gap: '1rem',
     autoplay: true,
-    perPage: 3,
+    perPage: counter,
     perMove: 1,
     type: 'loop',
     breakpoints: {
@@ -62,13 +69,13 @@ const Testimonial = () => {
         >
               {testimonials.map(testimonial => {
                 return(
-                  <SplideSlide key={testimonial.id_mensaje}>
-                <div>
-                   <div className="testimonial__quote is-flex is-flex-direction-column is-align-items-center p-5 is-relative">
-                <FaQuoteLeft
-                  size={32}
-                  className="testimonial__quote-icon mb-4"
-                />
+                  <SplideSlide key={testimonial.id_mensaje} className="is-flex is-justify-content-center">
+                  <div className='testimonial__content-quote is-flex is-flex-direction-column is-align-items-center'>
+                    <div className="testimonial__quote is-flex is-flex-direction-column is-align-items-center p-5 is-relative">
+                  <FaQuoteLeft
+                    size={32}
+                    className="testimonial__quote-icon mb-4"
+                  />
                 <p className="has-text-centered">
                  {testimonial.mensaje}
                 </p>
