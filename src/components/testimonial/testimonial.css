@@ -12,7 +12,7 @@
     margin-bottom: 4rem;
 }
 .testimonial__content-quote{
-    max-width: 350px;
+    max-width: 450px;
 }
 .testimonial__quote{
     border: solid 4px var(--primary);
