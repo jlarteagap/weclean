@@ -60,11 +60,13 @@
 .splide__pagination__page.is-active{
     background-color: var(--secondary);
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .testimonial{
         box-sizing: border-box;
         padding: 3rem 1rem;
     }
+}
+@media only screen and (max-width: 460px){
     .testimonial__top-title{
         font-size: 2rem!important;
     } 

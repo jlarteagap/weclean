@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="container is-widescreen is-flex is-align-items-center is-flex-direction-column py-5">
-        <h3 className="banner__title title is-2">
+        <h3 className="banner__title title is-2 has-text-centered">
           ¡No espere, reserva una{' '}
           <span className="title__colored">limpieza ahora!</span>
         </h3>

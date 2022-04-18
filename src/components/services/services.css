@@ -1,5 +1,5 @@
 .services {
-    padding-top: 4rem;
+
 }
 .services__top-title{
     background-color: var(--secondary);
@@ -28,7 +28,14 @@
 .service__ul svg{
     color: var(--primary);
 }
-
+@media only screen and (max-width: 1024px){
+    .services{
+        padding-top:0 ;
+    }
+    .services__content{
+        padding: 1rem 2rem;
+    }
+}
 @media only screen and (max-width: 600px){
     .services__title{
         font-size: 1.25rem !important;

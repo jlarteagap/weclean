@@ -3,10 +3,12 @@
     background-color: var(--bgcolor);
     padding: 5rem 0;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .banner{
         padding: 0 1rem;
     }
+}
+@media only screen and (max-width: 460px){
     .banner__title{
         text-align: center;
         font-size: 1.5rem !important;

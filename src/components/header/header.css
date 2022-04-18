@@ -10,11 +10,15 @@
     background-color: transparent !important;
     color: var(--primary) !important;
 }
+@media only screen and (max-width: 768px) {
+    .header__brand .navbar-burger{margin-right: 1rem;}
+}
 @media only screen and (max-width: 600px){
     .header__brand{
         display: flex;
         align-items: center;
     }
+    .header__brand .navbar-burger{margin-right: .5rem;}
     .header__social{
         justify-content: center;
     }

@@ -28,10 +28,18 @@
 .how__card p{
     margin-top: 1rem;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .how__work{
         padding: 0 1rem;
     }
+    .how__card{
+        width: 250px;
+    }
+    .how__card h4{
+        font-size: 1.25rem;
+    }
+}
+@media only screen and (max-width: 468px){
     .how__cards{
         flex-direction: column;
     }

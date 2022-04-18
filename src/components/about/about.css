@@ -26,8 +26,22 @@
 .about__card p{
     margin-top: 1rem;
 }
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
+    .about{
+        padding: 3rem 1rem;
+    }
+    .about__card{
+        width: 250px;
+        text-align: center;
+    }
+    .about__card h4{
+        font-size: 1.25rem;
+    }
+    .about__card p{
+        font-size: .85rem;
+    }
+}
+@media only screen and (max-width: 480px){
     .about{
         padding: 0 1rem;
     }

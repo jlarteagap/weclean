@@ -17,7 +17,7 @@ const Header = () => {
     <header className="header">
       <nav className="navbar is-fixed-top" role="navigation">
         <div className="container is-widescreen">
-          <div className="header__brand navbar-brand">
+          <div className="header__brand navbar-brand is-align-items-center">
             <a className="navbar-item" href={empresa.url}>
               <img loading="lazy" src={empresa.logo} className="header__logo" />
             </a>
