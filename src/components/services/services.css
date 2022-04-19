@@ -28,6 +28,10 @@
 .service__ul svg{
     color: var(--primary);
 }
+
+.service__columns img{
+    width: 100%;
+}
 @media only screen and (max-width: 1024px){
     .services{
         padding-top:0 ;
