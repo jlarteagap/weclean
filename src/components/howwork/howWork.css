@@ -42,5 +42,6 @@
 @media only screen and (max-width: 468px){
     .how__cards{
         flex-direction: column;
+        align-items: center;
     }
 }

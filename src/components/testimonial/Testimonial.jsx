@@ -31,20 +31,22 @@ const Testimonial = () => {
     counter = testimonials.length
   }
 
+  console.log(counter)
+
   const mainOptions = {
     arrows: false,
     rewind: true,
     gap: '1rem',
     autoplay: true,
-    perPage: counter,
+    perPage: 3,
     perMove: 1,
     type: 'loop',
     breakpoints: {
+      768: {
+        perPage: 2
+      },
      640:{
       perPage: 1,
-     },
-     768:{
-       perPage: 2
      }
     }
   };
