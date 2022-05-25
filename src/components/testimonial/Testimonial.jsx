@@ -24,15 +24,6 @@ const Testimonial = () => {
     })()
   }, [])
 
-  let counter
-  if(testimonials.length >= 3) {
-    counter = 3
-  } else {
-    counter = testimonials.length
-  }
-
-  console.log(counter)
-
   const mainOptions = {
     arrows: false,
     rewind: true,
