@@ -9,7 +9,7 @@ import {
   Footer,
   About
 } from './components'
-
+import { SplashScreen } from './components/utils/SplashScreen'
 import { AppProvider } from './context/AppContext'
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
     <AppProvider>
       <div className="App">
         <div className="main">
+          <SplashScreen />
           <Header />
           <Slide />
           <About />

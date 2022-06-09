@@ -13,6 +13,12 @@ export function AppProvider({ children }) {
   const [serviceContext, setServiceContext] = useState(false)
   const [testimonialContext, setTestimonialContext] = useState(false)
   const [howContext, setHowContext] = useState(false)
+  const [splash, setSplash] = useState(true)
+
+  setTimeout(() => {
+    setSplash(false)
+  }, 3000)
+
   useEffect(() => {
     const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub=${UB}`
     fetch(url)
@@ -40,6 +46,7 @@ export function AppProvider({ children }) {
     serviceContext,
     testimonialContext,
     howContext,
+    splash,
     updateAbout,
     updateService,
     updateTestimonial,
